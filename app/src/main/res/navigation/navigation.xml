@@ -21,6 +21,6 @@
     <fragment
         android:id="@+id/signinPasswordFragment"
         android:name="com.cochipcho.proto.SigninFragments.SigninPasswordFragment"
-        android:label="fragment_signinpassword"
+        android:label=""
         tools:layout="@layout/fragment_signinpassword" />
 </navigation>

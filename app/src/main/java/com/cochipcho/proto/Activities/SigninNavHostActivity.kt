@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.cochipcho.proto.R
+import com.google.firebase.FirebaseApp
 
 class SigninNavHostActivity : AppCompatActivity() {
 

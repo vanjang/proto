@@ -42,7 +42,7 @@ class SigninFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         Timber.i("onActivityCreated")
-        viewModel = ViewModelProvider(this).get(SharedSigninViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(SharedSigninViewModel::class.java)
         // TODO: Use the ViewModel
         emailTextChanged()
         proceed_button_signin.setOnClickListener { proceedButtonTapped() }
@@ -51,7 +51,7 @@ class SigninFragment : Fragment() {
 
     fun proceedButtonTapped() {
         val email = email_textfield_siginin.text.toString()
-        viewModel.email = email
+        viewModel.email.value = email
         view?.findNavController()?.navigate(R.id.signinPasswordFragment)
     }
 

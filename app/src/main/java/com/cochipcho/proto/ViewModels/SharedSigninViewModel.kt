@@ -1,6 +1,7 @@
 package com.cochipcho.proto.ViewModels
 
 import android.content.ClipData
+import android.widget.Button
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -9,19 +10,20 @@ class SharedSigninViewModel : ViewModel() {
 //    var email: String?
 //
 //
-//    val selected = MutableLiveData<ClipData.Item>()
-//
-//    fun select(item: ClipData.Item) {
-//        selected.value = item
-//    }
+    var email = MutableLiveData<String>()
+    var password = MutableLiveData<String>()
 
-    var email: String = ""
-    var password: String = ""
+    fun passEmail(passingEmail: String) {
+        email.value = passingEmail
+    }
+
+    fun updateButtonState(button: Button) {
+        
+    }
+
 
     override fun onCleared() {
         super.onCleared()
-
-
     }
 
 
