@@ -12,15 +12,10 @@ class SharedSigninViewModel : ViewModel() {
 //
     var email = MutableLiveData<String>()
     var password = MutableLiveData<String>()
-
-    fun passEmail(passingEmail: String) {
-        email.value = passingEmail
-    }
-
-    fun updateButtonState(button: Button) {
-        
-    }
-
+//
+//    fun passEmail(passingEmail: String) {
+//        email.value = passingEmail
+//    }
 
     override fun onCleared() {
         super.onCleared()

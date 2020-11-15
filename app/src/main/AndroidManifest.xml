@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cochipcho.proto">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".Activities.App"
         android:allowBackup="true"
@@ -11,18 +11,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proto">
         <activity
+            android:name=".Activities.ProfileNavHostActivity"
+            android:theme="@style/AppTheme.ActionBar.Transparent">
+            <intent-filter>
+                <data
+                    android:host="conchip-b1ba6.firebaseapp.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Activities.SplashActivity"
             android:theme="@style/AppTheme.ActionBar.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activities.SigninNavHostActivity"
-            android:theme="@style/AppTheme.ActionBar.Transparent"
-            ></activity>
+            android:theme="@style/AppTheme.ActionBar.Transparent">
+        </activity>
         <activity android:name=".Activities.MainTabBarActivity" />
+
+        <!-- [START firebase_service] -->
+        <service
+            android:name=".java.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- [END firebase_service] -->
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+<!--        <meta-data-->
+<!--            android:name="com.google.firebase.messaging.default_notification_icon"-->
+<!--            android:resource="@drawable/ic_stat_ic_notification" />-->
+<!--        &lt;!&ndash; Set color used with incoming notification messages. This is used when no color is set for the incoming-->
+<!--             notification message. See README(https://goo.gl/6BKBk7) for more. &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="com.google.firebase.messaging.default_notification_color"-->
+<!--            android:resource="@color/colorAccent" />-->
+
+<!--        <meta-data-->
+<!--            android:name="com.google.firebase.messaging.default_notification_channel_id"-->
+<!--            android:value="@string/default_notification_channel_id" />-->
+
 
     </application>
 

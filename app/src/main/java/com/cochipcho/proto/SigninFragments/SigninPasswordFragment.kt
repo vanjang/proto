@@ -44,13 +44,16 @@ class SigninPasswordFragment : Fragment() {
         val email = viewModel.email.value.toString()
         val password = password_textfield_siginin.text.toString()
 
-        EmailAuth.login(email, password) { isLoggedIn ->
+        EmailAuth.login(email, password) { isLoggedIn, error ->
+            if (error != null) {
+                Toast.makeText(requireActivity(), "Login failed for reason: ${error.localizedMessage}!", LENGTH_LONG).show()
+                return@login
+            }
+
             if (isLoggedIn) {
                 val intent = Intent(getActivity(), MainTabBarActivity::class.java)
                 getActivity()?.startActivity(intent)
                 activity?.finish()
-            } else {
-                Toast.makeText(requireActivity(), "Login failed!", LENGTH_LONG).show()
             }
         }
     }

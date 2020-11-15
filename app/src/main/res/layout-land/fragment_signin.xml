@@ -14,7 +14,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="Login"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -25,7 +25,7 @@
         android:id="@+id/imageView"
         android:layout_width="325dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,59 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <!--            <com.google.android.gms.common.SignInButton-->
+        <Button
+            android:id="@+id/google_signin_button_signin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            android:background="@drawable/round_button"
+            android:text="Google"
+            android:backgroundTint="@color/white" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/fb_signin_button_signin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            android:background="@drawable/round_button"
+            android:text="Facebook"
+            android:backgroundTint="#4267B2" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/apple_sign_in_button_signin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="0"
+            android:background="@drawable/round_button"
+            android:text="Apple"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -100,48 +152,13 @@
             android:textSize="10sp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/create_account_button_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create an account"
             android:textColor="@color/black"
             android:textSize="10sp"
             app:backgroundTint="@android:color/transparent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

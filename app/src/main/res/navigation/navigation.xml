@@ -8,7 +8,14 @@
         android:id="@+id/signinFragment"
         android:name="com.cochipcho.proto.SigninFragments.SigninFragment"
         android:label=""
-        tools:layout="@layout/fragment_signin" />
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment_to_signinPasswordFragment"
+            app:destination="@id/signinPasswordFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_signupEmailFragment"
+            app:destination="@id/signupEmailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/introFragment"
         android:name="com.cochipcho.proto.SigninFragments.IntroFragment"
@@ -23,4 +30,25 @@
         android:name="com.cochipcho.proto.SigninFragments.SigninPasswordFragment"
         android:label=""
         tools:layout="@layout/fragment_signinpassword" />
+    <fragment
+        android:id="@+id/signupEmailFragment"
+        android:name="com.cochipcho.proto.SignupFragments.SignupEmailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_signup_email" >
+        <action
+            android:id="@+id/action_signupEmailFragment_to_signupPasswordFragment"
+            app:destination="@id/signupPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupPasswordFragment"
+        android:name="com.cochipcho.proto.SignupFragments.SignupPasswordFragment"
+        tools:layout="@layout/fragment_signup_password">
+        <action
+            android:id="@+id/action_signupPasswordFragment_to_signupEmailVerificationFragment"
+            app:destination="@id/signupEmailVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupEmailVerificationFragment"
+        android:name="com.cochipcho.proto.SignupFragments.SignupEmailVerificationFragment"
+        tools:layout="@layout/fragment_signup_email_verification"/>
 </navigation>
