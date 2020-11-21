@@ -72,5 +72,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-database-ktx'
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0'
+    implementation 'androidx.browser:browser:1.2.0'
 
+
+    implementation 'com.willowtreeapps:signinwithapplebutton:0.3'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
 }

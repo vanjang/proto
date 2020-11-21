@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">proto</string>
+    <string name="app_name">conchip</string>
     <string name="textview_splash">cochipcho</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="web_client_id">736223377151-1e1574pv965kiuakgvsenagfqc57010f.apps.googleusercontent.com</string>
 
+    <string name="facebook_app_id">734585817303685</string>
+    <string name="fb_login_protocol_scheme">fb734585817303685</string>
 
 </resources>

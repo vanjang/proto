@@ -6,7 +6,7 @@
     app:startDestination="@id/introFragment">
     <fragment
         android:id="@+id/signinFragment"
-        android:name="com.cochipcho.proto.SigninFragments.SigninFragment"
+        android:name="com.cochipcho.conchip.SigninFragments.SigninFragment"
         android:label=""
         tools:layout="@layout/fragment_signin" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/introFragment"
-        android:name="com.cochipcho.proto.SigninFragments.IntroFragment"
+        android:name="com.cochipcho.conchip.SigninFragments.IntroFragment"
         android:label=""
         tools:layout="@layout/fragment_intro" >
         <action
@@ -27,12 +27,12 @@
     </fragment>
     <fragment
         android:id="@+id/signinPasswordFragment"
-        android:name="com.cochipcho.proto.SigninFragments.SigninPasswordFragment"
+        android:name="com.cochipcho.conchip.SigninFragments.SigninPasswordFragment"
         android:label=""
         tools:layout="@layout/fragment_signinpassword" />
     <fragment
         android:id="@+id/signupEmailFragment"
-        android:name="com.cochipcho.proto.SignupFragments.SignupEmailFragment"
+        android:name="com.cochipcho.conchip.SignupFragments.SignupEmailFragment"
         android:label=""
         tools:layout="@layout/fragment_signup_email" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupPasswordFragment"
-        android:name="com.cochipcho.proto.SignupFragments.SignupPasswordFragment"
+        android:name="com.cochipcho.conchip.SignupFragments.SignupPasswordFragment"
         tools:layout="@layout/fragment_signup_password">
         <action
             android:id="@+id/action_signupPasswordFragment_to_signupEmailVerificationFragment"
@@ -49,6 +49,6 @@
     </fragment>
     <fragment
         android:id="@+id/signupEmailVerificationFragment"
-        android:name="com.cochipcho.proto.SignupFragments.SignupEmailVerificationFragment"
+        android:name="com.cochipcho.conchip.SignupFragments.SignupEmailVerificationFragment"
         tools:layout="@layout/fragment_signup_email_verification"/>
 </navigation>

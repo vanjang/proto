@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nicknameFragment"
-        android:name="com.cochipcho.proto.ProfileFragments.NicknameFragment"
-        android:label="fragment_nickname"
+        android:name="com.cochipcho.conchip.ProfileFragments.NicknameFragment"
+        android:label=""
         tools:layout="@layout/fragment_nickname" />
 </navigation>
